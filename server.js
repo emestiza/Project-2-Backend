@@ -26,7 +26,7 @@ db.on("connected", () => console.log("mongo connected!"));
 db.on("disconnected", () => console.log("mongo disconnected"));
 
 // CORS SECURITY CONFIGURATIONS
-const whitelist = ["http://localhost:3000/"];
+const whitelist = ["http://localhost:3000/", "https://job-tracker-em.netlify.app"];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {

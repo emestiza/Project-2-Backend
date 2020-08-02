@@ -76,7 +76,10 @@ Based on the initial logic defined in the previous sections, the logic is broken
 | Total | H | 2hrs| hrs | hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ This section lists all supporting libraries and thier role in the project. 
+
+- Express.js is used to build an API 
+- Node.js is used to build a server 
 
 ## Code Snippet
 
