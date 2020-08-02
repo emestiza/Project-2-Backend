@@ -2,7 +2,9 @@
 
 ## Project
 
-Link to completed project [here]().
+Link to project fullstack [here]().
+Link to project frontend [here](https://github.com/emestiza/Project-2-Frontend).
+Link to project backend [here](https://github.com/emestiza/Project-2-Backend).
 
 ## Project Schedule
 
@@ -33,7 +35,7 @@ Below are links to wireframes that show the application blueprint for mobile, ta
 
 ## Time/Priority Matrix 
 
-Here is a full list of features that have been [prioritized](https://res.cloudinary.com/dssciwyew/image/upload/v1596211407/Time%20Matrix%20P2.png) based on the `Time and Priority` Matix. 
+Here is a full list of features that have been [prioritized](https://res.cloudinary.com/dssciwyew/image/upload/v1596243605/Priority%20Matrix%20Backend%20P2.png) based on the `Time and Priority` Matix. 
 
 ### MVP/PostMVP
 
@@ -44,16 +46,12 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Create and setup JavaScript files for backend
 - Create and setup controllers, models, and routes for backend
 - Create and setup server for backend
-- Create and setup HTML, CSS, and JavaScript files for frontend
-- Create responsive design and hamburger menu icon
-- Pull in projects via API call from MongoDB Atlas
+- Test API in Postman
 - Deploy server via Heroku
-- Deploy application via Netlify
-- Use Bootstrap to improve UX and UI for frontend
 
 #### PostMVP 
 
-- Social media icons
+- Use seed data
 
 ## Functional Components
 
@@ -68,17 +66,13 @@ Based on the initial logic defined in the previous sections, the logic is broken
 | Routes | H | 2hrs| hrs | hrs |
 | Server | H | 2hrs| hrs | hrs |
 | API Deployment | H | 2hrs| hrs | hrs |
-| Frontend Strutcure | H | 4hrs| hrs | hrs |
-| Responsive Sesign | H | 4hrs | hrs | hrs|
 | Debugging & Testing | M | 8hrs| hrs | hrs |
-| Application Deployment | H | 2hrs| hrs | hrs |
-| Bootstrap | L | 8hrs| hrs | hrs |
-| Total | H | 40hrs| hrs | hrs |
+| Total | H | 20hrs| hrs | hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Scocial Media Icons | L | 2hrs | hrs | hrs|
+| Seed Data | L | 2hrs | hrs | hrs|
 | Total | H | 2hrs| hrs | hrs |
 
 ## Additional Libraries
