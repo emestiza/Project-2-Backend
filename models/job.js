@@ -7,7 +7,11 @@ const jobSchema = new Schema(
     "companyName": {type: String, required: true},
     "position": {type: String, required: true},
     "location": {type: String, required: true},
-    "jobUrl": {type: mongoose.SchemaTypes.Url, required: true}
+    "date": {type: String, required: false},
+    "phone": {type: String, required: false},
+    "onsite": {type: String, required: false},
+    "offer": {type: String, required: false},
+    "url": {type: mongoose.SchemaTypes.Url, required: true}
   },
   {timestamps: true}
 );

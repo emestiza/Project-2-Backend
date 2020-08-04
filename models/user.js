@@ -8,9 +8,6 @@ const userSchema = new Schema(
     "major": {type: String, required: false},
     "minor": {type: String, required: false},
     "linkedin": {type: mongoose.SchemaTypes.Url, required: false},
-    "phone": {type: String, required: false},
-    "onsite": {type: String, required: false},
-    "rejected": {type: String, required: false},
     "job": [{type: Schema.Types.ObjectId, ref: 'Job'}]
   },
   {timestamps: true}

@@ -1,4 +1,5 @@
 const user = require("../models/user.js");
+// const seedData = require('../seed/user.js');
 
 // INDEX - GET /user which will list out all users
 const index = async (req, res) => {
@@ -40,9 +41,14 @@ const destroy = async (req, res) => {
   }
 };
 
+// Seed Data
+// const seed = async (req,res) => {
+//   res.json(await user.create(seedData))
+// }
+
 module.exports = {
   index,
   create,
   update,
-  destroy,
+  destroy
 };
