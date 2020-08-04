@@ -8,7 +8,7 @@ const userSchema = new Schema(
     "major": {type: String, required: false},
     "minor": {type: String, required: false},
     "linkedin": {type: mongoose.SchemaTypes.Url, required: false},
-    "job": [{type: Schema.Types.ObjectId, ref: 'Job'}]
+    "jobs": [{type: Schema.Types.ObjectId, ref: 'Job'}]
   },
   {timestamps: true}
 );

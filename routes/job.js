@@ -1,6 +1,6 @@
 const express = require("express");
 const jobRouter = express.Router();
-const {index, create, update, destroy} = require("../controllers/job.js");
+const {index, create, update, destroy, jobSeed} = require("../controllers/job.js");
 
 // Routes specific to this router
 // get all jobs
@@ -14,5 +14,8 @@ jobRouter.put("/:id", update);
 
 // destroy job
 jobRouter.delete("/:id", destroy);
+
+// seed job data
+jobRouter.get("/seed", jobSeed);
 
 module.exports = jobRouter;

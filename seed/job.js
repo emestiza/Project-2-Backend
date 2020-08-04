@@ -1,39 +1,32 @@
-const db = require('../db/connection.js')
-const job = require('../models/job')
-const user = require('../models/user') 
+const db = require('../db/connection.js');
+const job = require('../models/job.js');
+const user = require('../models/user.js');
+const mongoose = require("mongoose"); // require mongoose
+const {Schema, model} = mongoose; // destructure Schema and model from mongoose
+const urls = require("mongoose-type-url"); // url library
 
 // define jobs to seed (with references to users already added)
-const jobSeed = [
+const seed = [
   {
-    title: "3 Feet High and Rising",
-    artist: "De La Soul",
-    releaseYear: 1989,
-    coverImage: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/DeLaSoul3FeetHighandRisingalbumcover.jpg/220px-DeLaSoul3FeetHighandRisingalbumcover.jpg'
+    "company": "Tesla",
+    "position": "Software Engineer",
+    "location": "Palo Alto, California",
+    "date": "8/3/20",
+    "phone": "N/A",
+    "onsite": "N/A",
+    "offer": "N/A",
+    "url": "https://www.tesla.com/careers/job/software-engineerdataplatform-40000"
+  },
+  {
+    "company": "Apple",
+    "position": "Software Engineer",
+    "location": "Santa Clara Valley (Cupertino), California",
+    "date": "8/4/20",
+    "phone": "N/A",
+    "onsite": "N/A",
+    "offer": "N/A",
+    "url": "https://jobs.apple.com/en-us/details/200169548/software-engineer"
   }
 ]
 
-// add the job seed array with necessary awaits
-const addJob = async () => {
-  await Promise.all(userSeed.map(async jobToAdd => {
-
-        // find user document with matching name
-        let user = await user.findOne({fullname: jobToAdd.user})
-
-        // update object with user ID
-        jobToAdd.user = user._id
-
-        // create job
-        const job = await job.create(jobToAdd)
-        console.log(job)
-
-        await user.job.push(job._id)
-        await user.save()
-        console.log(user)
-    }))
-
-  db.close()
-
-}
-
-// invoke the async function
-addJob()
+module.exports  = seed

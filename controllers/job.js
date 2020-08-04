@@ -1,4 +1,5 @@
 const job = require("../models/job.js");
+const seed = require("../seed/job.js");
 
 // INDEX - GET /job which will list out all job
 const index = async (req, res) => {
@@ -40,9 +41,15 @@ const destroy = async (req, res) => {
   }
 };
 
+// SEED DATA
+const jobSeed = async (req, res) => {
+  res.json(await job.create(seed))
+}
+
 module.exports = {
   index,
   create,
   update,
   destroy,
+  jobSeed
 };
