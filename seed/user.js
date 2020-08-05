@@ -16,32 +16,4 @@ const seed = [
   }
 ]
 
-module.exports  = seed
-
-// insert all users from array
-// user.insertMany(userSeed,
-//   (error, response) => {
-//       if (error) {
-//           console.log(error);
-//       } else {
-//           console.log(response);
-//       }
-//       db.close()
-// })
-
-// async function to execute when file is run in Node
-// const run = async () => {
-    
-//   // clears collection for re-seed
-//   const emptyCollection = await user.deleteMany({})
-//   console.log(emptyCollection)
-
-//   // inserts from gifSeed array
-//   const result = await user.insertMany(userSeed)
-//   console.log(result)
-
-//   db.connection.close()
-
-// }
-
-// run() // execute!
+module.exports = seed
