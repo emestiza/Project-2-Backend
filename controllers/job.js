@@ -5,6 +5,7 @@ const seed = require("../seed/job.js");
 const index = async (req, res) => {
   try {
     const allJobs = await job.find({});
+    console.log(allJobs)
     res.status(200).json(allJobs);
   } catch (error) {
     res.status(400).send(error);
@@ -33,11 +34,13 @@ const update = async (req, res) => {
 
 // DESTROY - DELETE job/:jobId which will delete a job and redirect to the list of all jobs
 const destroy = async (req, res) => {
+  console.log(req.params.id)
   try {
     const deleteJob = await job.findByIdAndDelete(req.params.id);
     res.status(200).json(deleteJob);
   } catch (error) {
     res.status(400).send(error);
+    console.log(error)
   }
 };
 

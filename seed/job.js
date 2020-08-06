@@ -20,7 +20,7 @@ const seed = [
   {
     "company": "Apple",
     "position": "Software Engineer",
-    "location": "Santa Clara Valley (Cupertino), California",
+    "location": "Santa Clara Valley, California",
     "date": "8/4/20",
     "phone": "N/A",
     "onsite": "N/A",
