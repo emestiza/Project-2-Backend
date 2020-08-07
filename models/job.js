@@ -1,17 +1,16 @@
-const mongoose = require("mongoose"); // require mongoose
-const {Schema, model} = mongoose; // destructure Schema and model from mongoose
-const urls = require("mongoose-type-url"); // url library
+const mongoose = require("mongoose"); // Require mongoose
+const {Schema, model} = mongoose; // Destructure Schema and model from mongoose
+const urls = require("mongoose-type-url"); // Url library
 
 const jobSchema = new Schema(
   {
-    "company": {type: String, required: true},
-    "position": {type: String, required: true},
-    "location": {type: String, required: true},
+    "company": {type: String, required: false},
+    "position": {type: String, required: false},
+    "location": {type: String, required: false},
     "date": {type: String, required: false},
     "phone": {type: String, required: false},
     "onsite": {type: String, required: false},
-    "offer": {type: String, required: false},
-    "url": {type: mongoose.SchemaTypes.Url, required: false}
+    "offer": {type: String, required: false}
   },
   {timestamps: true}
 );

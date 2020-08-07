@@ -2,7 +2,7 @@
 
 ## Project
 
-Link to project fullstack [here]().
+Link to project fullstack [here](https://job-tracker-em.netlify.app/).
 Link to project frontend [here](https://github.com/emestiza/Project-2-Frontend).
 Link to project backend [here](https://github.com/emestiza/Project-2-Backend).
 
@@ -60,20 +60,20 @@ Based on the initial logic defined in the previous sections, the logic is broken
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Backend Structure | H | 2hrs| hrs | hrs |
-| Controllers | H | 2hrs| hrs | hrs |
-| Models | H | 2hrs| hrs | hrs |
-| Routes | H | 2hrs| hrs | hrs |
-| Server | H | 2hrs| hrs | hrs |
-| API Deployment | H | 2hrs| hrs | hrs |
-| Debugging & Testing | M | 8hrs| hrs | hrs |
-| Total | H | 20hrs| hrs | hrs |
+| Backend Structure | H | 2hrs| 2hrs | 2hrs |
+| Controllers | H | 2hrs| 1hr | 1hr |
+| Models | H | 2hrs| 1hr | 1hr |
+| Routes | H | 2hrs| 1hr | 1hr |
+| Server | H | 2hrs| 1hr | 1hr |
+| API Deployment | H | 2hrs| 2hrs | 2hrs |
+| Debugging & Testing | M | 8hrs| 8hrs | 8hrs |
+| Total | H | 20hrs| 16hrs | 16hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Seed Data | L | 2hrs | hrs | hrs|
-| Total | H | 2hrs| hrs | hrs |
+| Seed Data | L | 2hrs | 2hrs | 2hrs|
+| Total | H | 2hrs| 2hrs | 2hrs |
 
 ## Additional Libraries
  This section lists all supporting libraries and thier role in the project. 
@@ -83,16 +83,20 @@ Based on the initial logic defined in the previous sections, the logic is broken
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
+This code snippet enables the creation of an object vis Postman. 
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+// Create - Post
+const create = async (req, res) => {
+  try {
+    const newJob = await job.create(req.body);
+    res.status(200).json(newJob);
+  } catch (error) {
+    res.status(400).send(error);
+  }
+};
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
-
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ERROR**: The seed data could not be pulled in Postman                               
+**RESOLUTION**: Created a new route for seed data

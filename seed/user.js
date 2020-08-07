@@ -1,11 +1,11 @@
 const db = require('../db/connection.js');
 const user = require('../models/user.js');
 const job = require('../models/job.js');
-const mongoose = require("mongoose"); // require mongoose
-const {Schema, model} = mongoose; // destructure Schema and model from mongoose
-const urls = require("mongoose-type-url"); // url library
+const mongoose = require("mongoose"); // Require mongoose
+const {Schema, model} = mongoose; // Destructure Schema and model from mongoose
+const urls = require("mongoose-type-url"); // Url library
 
-// define users to seed
+// Define users to seed
 const seed = [
   {
     "fullname": "Tim",

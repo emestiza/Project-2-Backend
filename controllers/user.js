@@ -1,7 +1,7 @@
 const user = require("../models/user.js");
 const seed = require("../seed/user.js");
 
-// INDEX - GET /user which will list out all users
+// Index - Get
 const index = async (req, res) => {
   try {
     const allUsers = await user.find({});
@@ -11,7 +11,7 @@ const index = async (req, res) => {
   }
 };
 
-// CREATE - POST /user which will add a new user and return a list of all users
+// Create - Post
 const create = async (req, res) => {
   try {
     const newUser = await user.create(req.body);
@@ -21,7 +21,7 @@ const create = async (req, res) => {
   }
 };
 
-// UPDATE - PUT user/:userId which will update a user and redirect to the list of all users
+// Update - Put
 const update = async (req, res) => {
   try {
     const updateUser = await user.findByIdAndUpdate(req.params.id, req.body, {new: true});
@@ -31,7 +31,7 @@ const update = async (req, res) => {
   }
 };
 
-// DESTROY - DELETE user/:userId which will delete a user and redirect to the list of all users
+// Destroy - Delete
 const destroy = async (req, res) => {
   try {
     const deleteUser = await user.findByIdAndDelete(req.params.id);
@@ -41,7 +41,7 @@ const destroy = async (req, res) => {
   }
 };
 
-// SEED DATA
+// Seed Data
 const userSeed = async (req, res) => {
   res.json(await user.create(seed))
 }

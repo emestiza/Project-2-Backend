@@ -1,7 +1,7 @@
 const job = require("../models/job.js");
 const seed = require("../seed/job.js");
 
-// INDEX - GET /job which will list out all job
+// Index - Get
 const index = async (req, res) => {
   try {
     const allJobs = await job.find({});
@@ -12,7 +12,7 @@ const index = async (req, res) => {
   }
 };
 
-// CREATE - POST /job which will add a new job and return a list of all jobs
+// Create - Post
 const create = async (req, res) => {
   try {
     const newJob = await job.create(req.body);
@@ -22,7 +22,7 @@ const create = async (req, res) => {
   }
 };
 
-// UPDATE - PUT job/:jobId which will update a job and redirect to the list of all job
+// Update - Put
 const update = async (req, res) => {
   try {
     const updateJob = await job.findByIdAndUpdate(req.params.id, req.body, {new: true});
@@ -32,7 +32,7 @@ const update = async (req, res) => {
   }
 };
 
-// DESTROY - DELETE job/:jobId which will delete a job and redirect to the list of all jobs
+// Destroy - Delete
 const destroy = async (req, res) => {
   console.log(req.params.id)
   try {
@@ -44,7 +44,7 @@ const destroy = async (req, res) => {
   }
 };
 
-// SEED DATA
+// Seed Data
 const jobSeed = async (req, res) => {
   res.json(await job.create(seed))
 }

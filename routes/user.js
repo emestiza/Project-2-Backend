@@ -3,19 +3,19 @@ const userRouter = express.Router();
 const {index, create, update, destroy, userSeed} = require("../controllers/user.js");
 
 // Routes specific to this router
-// get all users
+// Get all users
 userRouter.get("/", index);
 
-// create new user
+// Create new user
 userRouter.post("/", create);
 
-// update user
+// Update user
 userRouter.put("/:id", update);
 
-// destroy user
+// Destroy user
 userRouter.delete("/:id", destroy);
 
-// seed job data
+// Seed data
 userRouter.get("/seed", userSeed);
 
 module.exports = userRouter;
